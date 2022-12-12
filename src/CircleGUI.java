@@ -32,12 +32,18 @@ public class CircleGUI extends JFrame{
         return area;
     }
 
+    public double Circumference(){
+        double circumference = Math.PI * Radius() * 2;
+        return circumference;
+    }
+
 
     public CircleGUI(){
         btnCompute.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 tfArea.setText(String.valueOf(Area()));
+                tfCircumference.setText(String.valueOf(Circumference()));
             }
         });
     }
