@@ -46,6 +46,17 @@ public class CircleGUI extends JFrame{
                 tfCircumference.setText(String.valueOf(Circumference()));
             }
         });
+
+        btnClear.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tfRadius.setText("");
+                tfArea.setText("");
+                tfCircumference.setText("");
+            }
+        });
+
+
     }
 
 }
