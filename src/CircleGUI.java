@@ -15,4 +15,8 @@ public class CircleGUI extends JFrame{
         app.setDefaultCloseOperation(EXIT_ON_CLOSE);
         app.setVisible(true);
     }
+
+    public void display(){
+        System.out.println("fffff");
+    }
 }
