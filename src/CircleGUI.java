@@ -1,12 +1,16 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class CircleGUI extends JFrame{
+
     private JPanel pnlMain;
     private JTextField tfRadius;
     private JTextField tfArea;
     private JTextField tfCircumference;
     private JButton btnClear;
     private JButton btnCompute;
+
 
     public static void main(String[] args) {
         CircleGUI app = new CircleGUI();
@@ -16,8 +20,26 @@ public class CircleGUI extends JFrame{
         app.setVisible(true);
     }
 
-    public void display(){
-        System.out.println("fffff");
+
+
+    public double Radius(){
+        double radius = Double.parseDouble(tfRadius.getText());
+        return radius;
+    }
+
+    public double Area(){
+        double area = Math.PI * Radius() * Radius();
+        return area;
+    }
+
+
+    public CircleGUI(){
+        btnCompute.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tfArea.setText(String.valueOf(Area()));
+            }
+        });
     }
 
 }
