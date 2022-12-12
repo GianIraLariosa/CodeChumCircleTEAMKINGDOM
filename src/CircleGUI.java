@@ -20,8 +20,4 @@ public class CircleGUI extends JFrame{
         System.out.println("fffff");
     }
 
-
-    //Rhoy Alvin Quilapio
-
-
 }
